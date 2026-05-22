@@ -56,7 +56,7 @@ export function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 z-50">
               <img
-                src="/pasted-image.jpg"
+                src={`${import.meta.env.BASE_URL}pasted-image.jpg`}
                 alt="Casa Puppy Logo"
                 className="h-12 w-12 object-cover rounded-full border-2 border-golden-brown" />
               

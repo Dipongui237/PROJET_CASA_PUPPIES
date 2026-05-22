@@ -6,18 +6,18 @@ import { useT } from '../contexts/LanguageContext';
 export function Footer() {
   const { t } = useT();
   return (
-    <footer className="bg-dark-brown text-cream pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-dark-brown pb-8 pt-16 text-cream">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Col 1: Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3 bg-white/10 p-2 rounded-lg inline-flex">
+            <div className="flex inline-flex items-center space-x-3 rounded-lg bg-white/10 p-2">
               <img
-                src="/pasted-image.jpg"
+                src={`${import.meta.env.BASE_URL}pasted-image.jpg`}
                 alt="Casa Puppy Logo"
-                className="h-10 w-10 object-cover rounded-full" />
+                className="h-10 w-10 rounded-full object-cover" />
               
-              <span className="font-playfair font-bold text-xl">
+              <span className="font-playfair text-xl font-bold">
                 Casa Puppy
               </span>
             </div>
@@ -25,13 +25,13 @@ export function Footer() {
             <div className="flex space-x-4 pt-2">
               <a
                 href="#"
-                className="text-cream/80 hover:text-golden-brown transition-colors">
+                className="text-cream/80 transition-colors hover:text-golden-brown">
                 
                 <Facebook size={20} />
               </a>
               <a
                 href="#"
-                className="text-cream/80 hover:text-golden-brown transition-colors">
+                className="text-cream/80 transition-colors hover:text-golden-brown">
                 
                 <Instagram size={20} />
               </a>
@@ -39,7 +39,7 @@ export function Footer() {
                 href="https://wa.me/393331234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream/80 hover:text-whatsapp transition-colors"
+                className="text-cream/80 transition-colors hover:text-whatsapp"
                 aria-label="WhatsApp">
                 
                 <WhatsAppIcon size={20} />
@@ -49,14 +49,14 @@ export function Footer() {
 
           {/* Col 2: Links */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg mb-4 text-warm-tan">
+            <h3 className="mb-4 font-playfair text-lg font-semibold text-warm-tan">
               {t('footer.links')}
             </h3>
-            <ul className="space-y-2 text-sm text-cream/80">
+            <ul className="text-cream/80 space-y-2 text-sm">
               <li>
                 <Link
                   to="/"
-                  className="hover:text-golden-brown transition-colors">
+                  className="transition-colors hover:text-golden-brown">
                   
                   {t('nav.home')}
                 </Link>
@@ -64,7 +64,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/cuccioli-disponibili"
-                  className="hover:text-golden-brown transition-colors">
+                  className="transition-colors hover:text-golden-brown">
                   
                   {t('nav.puppies')}
                 </Link>
@@ -72,7 +72,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/chi-siamo"
-                  className="hover:text-golden-brown transition-colors">
+                  className="transition-colors hover:text-golden-brown">
                   
                   {t('nav.about')}
                 </Link>
@@ -80,7 +80,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/garanzia-salute"
-                  className="hover:text-golden-brown transition-colors">
+                  className="transition-colors hover:text-golden-brown">
                   
                   {t('nav.health')}
                 </Link>
@@ -88,7 +88,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/testimonianze"
-                  className="hover:text-golden-brown transition-colors">
+                  className="transition-colors hover:text-golden-brown">
                   
                   {t('nav.testimonials')}
                 </Link>
@@ -96,7 +96,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/contatti"
-                  className="hover:text-golden-brown transition-colors">
+                  className="transition-colors hover:text-golden-brown">
                   
                   {t('nav.contact')}
                 </Link>
@@ -106,14 +106,14 @@ export function Footer() {
 
           {/* Col 3: Contact */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg mb-4 text-warm-tan">
+            <h3 className="mb-4 font-playfair text-lg font-semibold text-warm-tan">
               {t('footer.contact')}
             </h3>
-            <ul className="space-y-3 text-sm text-cream/80">
+            <ul className="text-cream/80 space-y-3 text-sm">
               <li className="flex items-start space-x-3">
                 <MapPin
                   size={18}
-                  className="shrink-0 mt-0.5 text-golden-brown" />
+                  className="mt-0.5 shrink-0 text-golden-brown" />
                 
                 <span>Via Roma 123, 20100 Milano, Italia</span>
               </li>
@@ -130,14 +130,14 @@ export function Footer() {
 
           {/* Col 4: Hours */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg mb-4 text-warm-tan">
+            <h3 className="mb-4 font-playfair text-lg font-semibold text-warm-tan">
               {t('footer.hours')}
             </h3>
-            <ul className="space-y-3 text-sm text-cream/80">
+            <ul className="text-cream/80 space-y-3 text-sm">
               <li className="flex items-start space-x-3">
                 <Clock
                   size={18}
-                  className="shrink-0 mt-0.5 text-golden-brown" />
+                  className="mt-0.5 shrink-0 text-golden-brown" />
                 
                 <div className="space-y-1">
                   <p>{t('footer.hours.week')}</p>
@@ -150,16 +150,16 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs text-cream/60">
+        <div className="border-cream/10 text-cream/60 flex flex-col items-center justify-between space-y-4 border-t pt-8 text-xs md:flex-row md:space-y-0">
           <p>© 2026 Casa Puppy. {t('footer.rights')}</p>
           <div className="flex space-x-4">
-            <Link to="#" className="hover:text-cream transition-colors">
+            <Link to="#" className="transition-colors hover:text-cream">
               {t('footer.privacy')}
             </Link>
-            <Link to="#" className="hover:text-cream transition-colors">
+            <Link to="#" className="transition-colors hover:text-cream">
               {t('footer.cookie')}
             </Link>
-            <Link to="#" className="hover:text-cream transition-colors">
+            <Link to="#" className="transition-colors hover:text-cream">
               {t('footer.terms')}
             </Link>
           </div>
